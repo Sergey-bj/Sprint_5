@@ -20,10 +20,16 @@ class TestRegistrationPage:
 
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((TestLocators.LOGIN_PAGE_LOG_IN_BUTTON)))
 
-        login_button = driver.find_element(*TestLocators.LOGIN_PAGE_LOG_IN_BUTTON)
+        driver.find_element(*TestLocators.REGISTRATION_PAGE_EMAIL).send_keys(generated_email)
+        driver.find_element(*TestLocators.REGISTRATION_PAGE_PASSWORD).send_keys(generated_password)
+        driver.find_element(*TestLocators.LOGIN_PAGE_LOG_IN_BUTTON).click()
+
+        WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(TestLocators.MAIN_PAGE_ADD_ORDER_BUTTON))
+
+        login_button = driver.find_element(*TestLocators.MAIN_PAGE_ADD_ORDER_BUTTON)
         text = login_button.text
 
-        assert text == 'Войти'
+        assert text == 'Оформить заказ'
 
     def test_registration_negative(self, driver, generated_email):
 
