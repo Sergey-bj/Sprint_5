@@ -10,10 +10,6 @@ def driver():
     driver.quit()
 
 @pytest.fixture
-def url():
-    return "https://stellarburgers.nomoreparties.site/"
-
-@pytest.fixture
 def generated_email():
     random_digits = random.randint(100, 999)
     return f"Sergey_Baulin123_{random_digits}@yandex.ru"
@@ -22,3 +18,5 @@ def generated_email():
 def generated_password():
     random_digits = random.randint(0000000, 9999999)
     return random_digits
+
+url = "https://stellarburgers.nomoreparties.site/"

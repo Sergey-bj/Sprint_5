@@ -7,7 +7,7 @@ from conftest import *
 from locators import TestLocators
 
 class TestLogOutOfAccount:
-    def test_click_button_log_out_of_account(self, driver, url, generated_email, generated_password):
+    def test_click_button_log_out_of_account(self, driver, generated_email, generated_password):
 
         driver.get(url)
 

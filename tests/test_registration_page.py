@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from conftest import *
 from locators import TestLocators
 class TestRegistrationPage:
-    def test_registration_succesfull(self, driver, url, generated_email, generated_password):
+    def test_registration_succesfull(self, driver, generated_email, generated_password):
 
         driver.get(url)
 
@@ -25,7 +25,7 @@ class TestRegistrationPage:
 
         assert text == 'Войти'
 
-    def test_registration_negative(self, driver, url, generated_email):
+    def test_registration_negative(self, driver, generated_email):
 
         driver.get(url)
 

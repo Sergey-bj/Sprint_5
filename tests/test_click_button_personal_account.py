@@ -8,7 +8,7 @@ from locators import TestLocators
 
 
 class TestClickButtonPersonalAccount:
-    def test__click_button_personal_account(self, driver, url):
+    def test__click_button_personal_account(self, driver):
 
         driver.get(url)
 

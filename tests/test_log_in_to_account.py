@@ -7,7 +7,7 @@ from conftest import *
 from locators import TestLocators
 
 class TestLogInToAccount:
-    def test_authorization_with_button_from_registration_form(self, driver, url, generated_email, generated_password):
+    def test_authorization_with_button_from_registration_form(self, driver, generated_email, generated_password):
 
         driver.get(url)
 
@@ -34,7 +34,7 @@ class TestLogInToAccount:
 
         assert text == "Оформить заказ"
 
-    def test_authorization_with_button_from_password_recovery_form(self, driver, url, generated_email, generated_password):
+    def test_authorization_with_button_from_password_recovery_form(self, driver, generated_email, generated_password):
 
         driver.get(url)
 
@@ -56,7 +56,7 @@ class TestLogInToAccount:
 
         assert text == "Оформить заказ"
 
-    def test_authorization_with_button_from_personal_acoount(self, driver, url, generated_email, generated_password):
+    def test_authorization_with_button_from_personal_acoount(self, driver, generated_email, generated_password):
 
         driver.get(url)
 
@@ -83,7 +83,7 @@ class TestLogInToAccount:
 
         assert text == "Оформить заказ"
 
-    def test_authorization_with_button_log_in_personal_acoount_main_page(self, driver, url, generated_email, generated_password):
+    def test_authorization_with_button_log_in_personal_acoount_main_page(self, driver, generated_email, generated_password):
 
         driver.get(url)
 

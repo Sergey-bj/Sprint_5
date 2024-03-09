@@ -7,7 +7,7 @@ from conftest import *
 from locators import TestLocators
 
 class TestConstructorSection:
-    def test_constructor_sauces(self,  driver, url):
+    def test_constructor_sauces(self,  driver):
 
         driver.get(url)
 
@@ -19,7 +19,7 @@ class TestConstructorSection:
 
         assert text == 'Соусы'
 
-    def test_constructor_bread(self, driver, url):
+    def test_constructor_bread(self, driver):
 
         driver.get(url)
 
@@ -31,7 +31,7 @@ class TestConstructorSection:
 
         assert text == 'Булки'
 
-    def test_constructor_fillings(self, driver, url):
+    def test_constructor_fillings(self, driver):
 
         driver.get(url)
 
