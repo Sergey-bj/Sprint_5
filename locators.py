@@ -27,6 +27,7 @@ class TestLocators:
     CONSTRUCTOR_PAGE_ELEMENT_SAUCES = By.XPATH, ".//h2[2][@class='text text_type_main-medium mb-6 mt-10' and text()='Соусы']"      # Кнопка Соусы
     CONSTRUCTOR_PAGE_ELEMENT_BREAD = By.XPATH, ".//h2[1][@class='text text_type_main-medium mb-6 mt-10' and text()='Булки']"       # Кнопка Булки
     CONSTRUCTOR_PAGE_ELEMENT_FILLINGS = By.XPATH, ".//h2[3][@class='text text_type_main-medium mb-6 mt-10' and text()='Начинки']"  # Кнопка Начинки
+    CONSTRUCTOR_PAGE_CLICK_TAB = By.XPATH, ".//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']"  #Переход на TAB при клике на элементы конструктора "Собери бургер"
 
     #HEADER
     HEADER_LOGO_BUTTON = By.XPATH, '//div[ contains(@class, "header__logo")]/a'  # кнопка Логотип

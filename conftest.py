@@ -12,7 +12,7 @@ def driver():
 @pytest.fixture
 def generated_email():
     random_digits = random.randint(100, 999)
-    return f"Sergey_Baulin123_{random_digits}@yandex.ru"
+    return f"Sergey_Baulin1234_{random_digits}@yandex.ru"
 
 @pytest.fixture
 def generated_password():

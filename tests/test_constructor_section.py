@@ -13,11 +13,12 @@ class TestConstructorSection:
 
         element_sauces = driver.find_element(*TestLocators.CONSTRUCTOR_PAGE_ELEMENT_SAUCES)
         driver.execute_script("arguments[0].scrollIntoView();", element_sauces)
-        text = element_sauces.text
 
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(TestLocators.CONSTRUCTOR_PAGE_ELEMENT_SAUCES))
 
-        assert text == 'Соусы'
+        element_tab = driver.find_element(*TestLocators.CONSTRUCTOR_PAGE_CLICK_TAB)
+
+        assert element_tab.is_displayed()
 
     def test_constructor_bread(self, driver):
 
@@ -25,11 +26,12 @@ class TestConstructorSection:
 
         element_bread = driver.find_element(*TestLocators.CONSTRUCTOR_PAGE_ELEMENT_BREAD)
         driver.execute_script("arguments[0].scrollIntoView();", element_bread)
-        text = element_bread.text
 
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(TestLocators.CONSTRUCTOR_PAGE_ELEMENT_BREAD))
 
-        assert text == 'Булки'
+        element_tab = driver.find_element(*TestLocators.CONSTRUCTOR_PAGE_CLICK_TAB)
+
+        assert element_tab.is_displayed()
 
     def test_constructor_fillings(self, driver):
 
@@ -37,8 +39,9 @@ class TestConstructorSection:
 
         element_fillings = driver.find_element(*TestLocators.CONSTRUCTOR_PAGE_ELEMENT_FILLINGS)
         driver.execute_script("arguments[0].scrollIntoView();", element_fillings)
-        text = element_fillings.text
 
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(TestLocators.CONSTRUCTOR_PAGE_ELEMENT_FILLINGS))
 
-        assert text == 'Начинки'
+        element_tab = driver.find_element(*TestLocators.CONSTRUCTOR_PAGE_CLICK_TAB)
+
+        assert element_tab.is_displayed()
