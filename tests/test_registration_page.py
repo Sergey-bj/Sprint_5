@@ -7,8 +7,6 @@ from locators import TestLocators
 class TestRegistrationPage:
     def test_registration_succesfull(self, driver, generated_email, generated_password):
 
-        driver.get(url)
-
         driver.find_element(*TestLocators.MAIN_PAGE_PERSONAL_ACCOUNT).click()
 
         driver.find_element(*TestLocators.LOGIN_PAGE_REGISTRATION_FORM_BUTTON).click()
@@ -32,8 +30,6 @@ class TestRegistrationPage:
         assert text == 'Оформить заказ'
 
     def test_registration_negative(self, driver, generated_email):
-
-        driver.get(url)
 
         driver.find_element(*TestLocators.MAIN_PAGE_PERSONAL_ACCOUNT).click()
 

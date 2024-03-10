@@ -9,8 +9,6 @@ from locators import TestLocators
 class TestLogInToAccount:
     def test_authorization_with_button_from_registration_form(self, driver, generated_email, generated_password):
 
-        driver.get(url)
-
         driver.find_element(*TestLocators.MAIN_PAGE_PERSONAL_ACCOUNT).click()
 
         driver.find_element(*TestLocators.LOGIN_PAGE_REGISTRATION_FORM_BUTTON).click()
@@ -36,8 +34,6 @@ class TestLogInToAccount:
 
     def test_authorization_with_button_from_password_recovery_form(self, driver, generated_email, generated_password):
 
-        driver.get(url)
-
         driver.find_element(*TestLocators.MAIN_PAGE_PERSONAL_ACCOUNT).click()
 
         driver.find_element(*TestLocators.LOGIN_PAGE_PASSWORD_RECOVERY_FORM).click()
@@ -57,8 +53,6 @@ class TestLogInToAccount:
         assert text == "Оформить заказ"
 
     def test_authorization_with_button_from_personal_acoount(self, driver, generated_email, generated_password):
-
-        driver.get(url)
 
         driver.find_element(*TestLocators.MAIN_PAGE_PERSONAL_ACCOUNT).click()
 
@@ -84,8 +78,6 @@ class TestLogInToAccount:
         assert text == "Оформить заказ"
 
     def test_authorization_with_button_log_in_personal_acoount_main_page(self, driver, generated_email, generated_password):
-
-        driver.get(url)
 
         driver.find_element(*TestLocators.MAIN_PAGE_LOG_IN_PERSONAL_ACCOUNT_BUTTON).click()
 

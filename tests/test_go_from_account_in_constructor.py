@@ -8,7 +8,6 @@ from locators import TestLocators
 
 class TestGoFromAccountInConstructor:
     def test_click_on_link_stellar_burgers(self, driver, generated_email, generated_password):
-        driver.get(url)
 
         driver.find_element(*TestLocators.MAIN_PAGE_PERSONAL_ACCOUNT).click()
 
@@ -43,8 +42,6 @@ class TestGoFromAccountInConstructor:
 
 
     def test_click_on_link_constructor(self, driver, generated_email, generated_password):
-
-        driver.get(url)
 
         driver.find_element(*TestLocators.MAIN_PAGE_PERSONAL_ACCOUNT).click()
 

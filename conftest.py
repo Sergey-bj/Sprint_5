@@ -1,11 +1,13 @@
 import pytest
 import random
 from selenium import webdriver
+from constants import Constants
 
 @pytest.fixture(scope='function')
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
+    driver.get(Constants.URL)
     yield driver
     driver.quit()
 
@@ -18,5 +20,3 @@ def generated_email():
 def generated_password():
     random_digits = random.randint(0000000, 9999999)
     return random_digits
-
-url = "https://stellarburgers.nomoreparties.site/"

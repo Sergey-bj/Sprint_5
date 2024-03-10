@@ -9,8 +9,6 @@ from locators import TestLocators
 class TestLogOutOfAccount:
     def test_click_button_log_out_of_account(self, driver, generated_email, generated_password):
 
-        driver.get(url)
-
         driver.find_element(*TestLocators.MAIN_PAGE_PERSONAL_ACCOUNT).click()
 
         driver.find_element(*TestLocators.LOGIN_PAGE_REGISTRATION_FORM_BUTTON).click()
